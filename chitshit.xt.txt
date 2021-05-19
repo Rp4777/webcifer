@@ -1,0 +1,30 @@
+
+
+Git----------------->
+Git is software for tracking changes in any set of files, usually used for coordinating work among programmers 
+collaboratively developing source code during software development.
+
+Git Hub---------------->
+GitHub, Inc. is a provider of Internet hosting for software development and version control using Git. It offers the 
+distributed version control and source code management (SCM) functionality of Git, plus its own features.
+ It provides access control and several collaboration features such as bug tracking, feature requests, task management, 
+continuous integration and wikis for every project.[4] Headquartered in California, it has been a subsidiary of Microsoft 
+since 2018.[5]
+
+--->
+git config --global  user.name Rahul
+
+----->
+git config --global  user.email "rpanchal8329@gmail.com
+
+---->
+touch.gitignore
+git init
+git add .
+git commit -m "Initial commit"
+git status (#just to see)
+$ git remote add origin git@github.com:Rp4777/webcifer.git
+$ ssh-keygen -t ed25519 -C "rpanchal8329@gmail.com"
+$ cat /c/Users/RAHUL/.ssh/id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICA74gY4oMGRWu3NhLg1M/0gEpE2MLtBgOb/ROUUw3cR rpanchal8329@gmail.com # Add this key to gitHub account
+$ git push origin master
