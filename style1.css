@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+.container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero{
+    min-height: 80vh;
+    width: 100%;
+    padding-top: 50px;
+    display: flex;
+    background-color: black;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.hero_info{
+    width: 100%;
+    text-align: center;
+}
+.hero_info_heading{
+    font-size: 5rem;
+    font-weight: 500;
+    color: white;
+}
+.hero_info_subheading{
+    font-size: 1.6rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+
+}
+.hero_info_button{
+    display: inline-block;
+    margin-top: 30px;
+    padding: 2rem 5rem;
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+    background-color: rgb(95, 91, 91);
+
+}
+.hero_img{
+    height: auto;
+    width: 80%;
+    margin-bottom: 3rem;
+}
+.hero_img img{
+    width: 100%;
+    height: 100%;
+}
+/* About section */
+
+.about{
+    width: 100%;
+    min-width: 50vw;
+    padding: 10rem 5rem;
+    flex-direction: column;
+}
+.about_info{
+    text-align: center;
+}
+.about_info_heading{
+    color: black;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+.about_info_desc{
+    margin: 10px;
+    line-height: 2rem;
+    font-size: 1.3rem;
+
+}
+.about_info_button{
+    /* border: 2px solid red; */
+    padding: 1.6rem 2.6rem;
+    margin: 20px;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(95, 91, 91);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3 rem;
+
+
+}
+.about_img_wrapper{
+    margin-top: 50px;
+    height: auto;
+    display: inline-block;
+    max-height: 400px;
+    position: relative;
+    
+}
+.about_img_wrapper img {
+    width: 100%;
+    height: 100%;
+
+}
+.about_img_wrapper::after{
+    position: absolute;
+    content: "";
+    right: -5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70%;
+    height: 120%;
+    background-color: rgb(214, 206, 203);
+    z-index: -1;
+}
+
+/* services section  */
+.services{
+    flex-direction: column;
+    min-height: 60vh;
+    padding: 10rem 5rem;
+}
+.services_header{
+    width: 100%;
+    text-align: center;
+}
+.services_header_heading{
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: black;
+}
+.services_header_desc,
+.service_back_desc{
+    font-size: 1.3rem;
+    line-height: 2rem;
+    margin-top: 20px;
+}
+.services_info{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}  
+.service{
+    width: 100%;
+    min-height: 300px;
+    margin: 5px;
+    position: relative;
+    transition: 0.3s ease transform;
+}
+.service_card{
+    position: absolute ;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition:0.3s ease transform;
+    display: block;
+ 
+}
+
+.service_front,
+.service_back{
+    position: absolute;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.13);
+    padding: 10px;
+}
+.service_back{
+    transform: rotateY(180deg);
+}
+.service_front i{
+    font-size: 4rem;
+    color: black;
+    margin-bottom: 10px;
+}
+.service_front_heading,
+.service_back_heading{
+    font-size: 2.5rem;
+    text-transform: capitalize;
+
+}
+.service:hover .service_card{
+    transform: rotateY(180deg);
+}
+.service:nth-child(2) .service_front {
+    background-image: url(img08.jpg);
+    background-size:cover ;
+    position: relative;
+    color: rgb(18, 27, 32);
+
+}
+.service:nth-child(2) .service_front i{
+    color: rgb(78, 78, 12);
+}
+
+/* hire section */
+.hire{
+    min-height: 10vh;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.205);
+    padding: 3rem 2rem;
+}
+.hire_heading{
+    color: black;
+    font-size: 2.2rem;
+    text-align: center;
+}
+.hire_button{
+    padding: 2rem 3rem;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.288);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.2rem;
+    margin-top: 10px;
+    color: white;
+    transition: 0.3s ease backgroun-color;
+}
+.hire_button:hover{
+    background-color: black;
+}
+/* footer section */
+.footer{
+    min-height: 20vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    flex-direction: column;
+    text-align: center;
+    padding: 5rem;
+
+}
+.footer_contact{
+    padding: 20px;
+}
+.footer_contact_heading{
+     font-size: 2.5rem;
+     text-transform:uppercase;
+     letter-spacing:2px ;
+     margin-bottom: 10px;
+}
+.footer_contact_info{
+    font-size: 1.4rem;
+    padding-top: 10px;
+    letter-spacing: 0.2rem;
+
+}
+.footer_social_icon a{
+    color: white;
+    font-size: 3rem;
+    margin: 0.4rem;
+    display: inline-block;
+}
+/* End footer section */
+
+/* Media quer for desktop and tab */
+
+/* Media query for desktop and tab  */
+@media only screen and (min-width: 768px) {
+	.nav-bar .nav-list .hamburger {
+		display: none;
+	}
+	.nav-bar {
+		width: 80%;
+	}
+	.nav-bar .nav-list ul {
+		transform: translateX(0);
+		position: initial;
+		padding: 0;
+		z-index: initial;
+		background-color: transparent;
+	}
+	.nav-bar .nav-list ul li {
+		display: inline-block;
+	}
+	.hero {
+		height: 100vh;
+		flex-direction: row;
+		padding-left: 10%;
+		justify-content: center;
+		align-items: center;
+	}
+	.hero .hero-info {
+		max-width: 30%;
+		text-align: left;
+	}
+	.hero .hero-info .hero-info-subheading {
+		font-size: 1.3rem;
+		letter-spacing: .5rem;
+	}
+	.hero .hero-img {
+		min-width: 400px;
+		max-width: 1000px;
+	}
+	.about {
+		width: 80%;
+		margin: 0 auto;
+		flex-direction: row;
+	}
+	.about .about-info {
+		width: 50%;
+		text-align: left;
+		padding-right: 17rem;
+	}
+	.services .services-header .services-header-desc {
+		max-width: 500px;
+		padding-top: 20px;
+		margin: 0 auto;
+	}
+	.services .services-info {
+		flex-direction: row;
+		width: 80%;
+	}
+	.services .services-info .service {
+		margin: 0;
+	}
+}
+/* End Media query for desktop and tab  */
+
+/* Media Query For Desktop Only  */
+@media only screen and (min-width: 1200px) {
+	.hero .hero-info .hero-info-heading {
+		font-size: 6rem;
+	}
+	.hero .hero-info .hero-info-subheading {
+		letter-spacing: .8rem;
+	}
+}
+/* End Media Query For Desktop Only  */
